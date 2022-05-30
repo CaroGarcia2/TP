@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contactanos</title>
+    <link rel="stylesheet" href="estilos.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap" rel="stylesheet">
+<meta name="viewport" content="width=device-width"/>
+<link rel="shortcut icon" href="Vela.png" />
+<link rel="stylesheet" href="fontawesome-free-6.1.1-web\css\all.min.css" >
+
+</head>
+
+<body>
+    <header class="parallax-completo">       
+            <h2> <a href="#escribinos" > Contactanos </a> </h2>       
+    </header>
+
+        <div class="formulario" id="escribinos">
+                  <form name="formulario" class="formulario"> 
+                        <p>
+                          <label for="nombre">Nombre
+                          </label>
+                            <input type="text" name="introducir_nombre" id="nombre"  placeholder="Escribí tu nombre">
+                        </p>
+                      
+                        <p>
+                          <label for="email">Correo electrónico
+                          </label>
+                            <input type="email" name="introducir_email" id="email"  placeholder="Escribí tu correo electrónico">
+                        </p>
+                      
+                        <p>
+                          <label for="asunto">Asunto
+                          </label>
+                            <input type="text" name="introducir_asunto" id="asunto"  placeholder="Escribí un asunto">
+                        </p>    
+                      
+                        <p>
+                          <label for="mensaje">Mensaje
+                          </label>                     
+                          <textarea name="introducir_mensaje" class="texto_mensaje" id="mensaje"  placeholder="¿Cómo podemos ayudarte?"></textarea> 
+                        </p>                    
+            
+                      <button type="submit" name="enviar_formulario" id="enviar"><p>ENVIAR</p></button>          
+                    
+                  </form>
+          </div>
+          <script>
+            (function(){
+          var formulario = document.getElementsByName('formulario')[0],
+              elementos = formulario.elements,
+              boton = document.getElementById('enviar');
+
+          var validarNombre = function(e){
+              if (formulario.nombre.value == 0){
+                  alert("Completa tu nombre");
+                  e.preventDefault();                 
+              }};
+          
+          var validarEmail = function(e){
+              if (formulario.email.value == 0){
+                  alert("Completa tu correo electrónico");
+                  e.preventDefault();                 
+              }};
+          var validarAsunto = function(e){
+              if (formulario.asunto.value == 0){
+                  alert("Completá el asunto");
+                  e.preventDefault();
+              }};
+          var validarMensaje = function(e){
+              if (formulario.mensaje.value == 0){
+                  alert("Dejanos un mensaje");
+                  e.preventDefault();  
+              }};
+
+          var validar = function(e){
+              validarNombre(e);
+              validarEmail(e);
+              validarAsunto(e);
+              validarMensaje(e);
+          };
+          formulario.addEventListener("submit", validar);
+      }())
+  </script>
+    
+    <section class="parallax-chico">
+      <div>       
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3284.01688788953!2d-58.38375908519529!3d-34.60373446500512!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4aa9f0a6da5edb%3A0x11bead4e234e558b!2sObelisco!5e0!3m2!1ses-419!2sar!4v1653260358037!5m2!1ses-419!2sar" width="80%" height="80%"></iframe> 
+      </div>
+    </section>
+   
+    <footer>
+      <div >
+      <section class="footer">
+          <h3 class="ft-title">Suscribite </h3>
+          <p>Suscribite a nuestro portal para conocer los últimos ingresos.</p>
+          <form name="suscribirme">
+            <input type="email"  placeholder="Correo electrónico">
+            <button type="submit" name="suscribirme" id="suscribirme"><p>SUSCRIBIRME</p></button>
+          </form>
+      </section>
+    </div>
+
+    <div>
+      <section class="ft-social">
+        <ul class="ft-social-list">
+          <li><a href="https://www.facebook.com/"><i class="fab fa-facebook-f "></i></a></li>
+          <li><a href="https://www.tiktok.com/"><i class="fab fa-tiktok"></i></a></li>
+          <li><a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a></li>
+        </ul>
+      </section>
+    </div>
+    </footer>
+  </body>
+
+</html>
